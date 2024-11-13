@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typescript Todo</title>
+    <link rel="stylesheet" href="main.css">
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+    </style>
+</head>
+<body>
+    <body class="bg-slate-300 font-sans">
+        <div class="container mx-auto mt-10 max-w-lg p-5">
+            <h1 class="text-3xl font-bold text-center mb-10 text-blue-800">My typescript todo</h1>
+            <form class="form flex items-center mb-5 bg-white shadow-lg rounded-lg overflow-hidden" autocomplete="off">
+                <input name="todo" required class="flex-grow p-3 text-lg border-none focus:outline-none placeholder-gray-400" 
+                       type="text" 
+                       placeholder="Add a new task...">
+                <button type="submit" 
+                        class="bg-blue-500 hover:bg-green-600 transition-all duration-300 text-white font-bold px-6 py-4">
+                    Add
+                </button>
+            </form>
+            <ul class="list bg-white shadow-lg rounded-lg p-5 space-y-4">
+            </ul>
+        </div>
+    <script src="./main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
